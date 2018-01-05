@@ -4,5 +4,6 @@ class Admin::RestaurantsController < ApplicationController
   before_action :authenticate_admin  
   ## 建立後台頁面
   def index
+    @restaurants = Restaurant.all
   end
 end
