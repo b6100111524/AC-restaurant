@@ -22,7 +22,10 @@ class Admin::RestaurantsController < ApplicationController
       render :new                                                 # 留在 new 頁面
     end
   end
-
+  ## 建立後台 show 動作  
+  def show
+    @restaurant = Restaurant.find(params[:id])
+  end
 
 
 
