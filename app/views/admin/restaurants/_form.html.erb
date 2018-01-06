@@ -1,0 +1,28 @@
+<%# 提供錯誤訊息 引導使用者修改 %>
+<% if @restaurant.errors.any? %>
+  <h2>We have some errors here!</h2>
+  <ul>
+    <% @restaurant.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  </ul>
+<% end %>
+<%# 產製表單填寫方格 加入 :admin 指定後送的後台路徑 %>
+<%= form_for  [:admin, @restaurant] do |f| %>
+  <%= f.label :name, "Name" %>
+  <%= f.text_field :name %>
+
+  <%= f.label :tel_on, "Tel" %>
+  <%= f.text_field :tel_on %>
+
+  <%= f.label :address, "Address" %>
+  <%= f.text_field :address %>
+
+  <%= f.label :opening_hour, "Opening Hours" %>
+  <%= f.text_field :opening_hour %>
+
+  <%= f.label :description, "Description" %>
+  <%= f.text_area :description %>
+
+  <%= f.submit %>
+<% end %>
