@@ -3,7 +3,7 @@ class Admin::RestaurantsController < ApplicationController
   before_action :authenticate_user!
   before_action :authenticate_admin
   ## 把私有方法限定給 show, edit & update
-  before_action :set_restaurant, only: [:show, :edit, :update]
+  before_action :set_restaurant, only: [:show, :edit, :update, :destroy]
   ## 建立後台 index 動作
   def index
     @restaurants = Restaurant.all
@@ -37,6 +37,13 @@ class Admin::RestaurantsController < ApplicationController
       render :edit
     end
   end
+  ## 建立後台 destory 動作
+  def destroy
+    @restaurant.destroy
+    redirect_to admin_restaurants_path
+    flash[:alert] = "restaurant was deleted"
+  end
+
 
 
 
