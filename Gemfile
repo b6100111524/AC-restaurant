@@ -33,8 +33,10 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-# 使用者套件下載
+# 使用者認證功能 Devise gem 套件下載
 gem 'devise'
+# 相片上傳功能 CarrierWave gem 套件下載
+gem 'carrierwave'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

@@ -51,9 +51,9 @@ class Admin::RestaurantsController < ApplicationController
   private
   ## 資安驗證
   def restaurant_params
-    params.require(:restaurant).permit(:name, :opening_hour, :tel_on, :address, :description)
+    params.require(:restaurant).permit(:name, :opening_hour, :tel_on, :address, :description, :image)
   end
-  ##
+  ## 呼叫特定餐廳 提供給 show, edit, update, destory action 節省程式碼
   def set_restaurant
     @restaurant = Restaurant.find(params[:id])
   end
