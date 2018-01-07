@@ -6,7 +6,8 @@ class Admin::RestaurantsController < ApplicationController
   before_action :set_restaurant, only: [:show, :edit, :update, :destroy]
   ## 建立後台 index 動作
   def index
-    @restaurants = Restaurant.all
+    ## @restaurants = Restaurant.all 修改為分頁顯示，一頁10筆資料
+    @restaurants = Restaurant.page(params[:page]).per(10)
   end
   ## 建立後台 new 動作
   def new

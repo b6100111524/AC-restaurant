@@ -37,8 +37,10 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise'
 # 相片上傳功能 CarrierWave gem 套件下載
 gem 'carrierwave'
-#產生假資料功能 FFaker gem 套件下載
+# 產生假資料功能 FFaker gem 套件下載
 gem 'ffaker'
+# 分頁機制功能 Kaminari gem 套件下載
+gem 'kaminari'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

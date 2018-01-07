@@ -10,5 +10,6 @@
   </li>
   <% end %>
 </ul>
-
+<%# 分頁功能 導覽列 %>
+<%= paginate @restaurants %>
 <%= link_to 'New Restaurant Add', new_admin_restaurant_path %>
