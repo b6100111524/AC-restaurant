@@ -41,6 +41,10 @@ gem 'carrierwave'
 gem 'ffaker'
 # 分頁機制功能 Kaminari gem 套件下載
 gem 'kaminari'
+# 前端樣版優化 bootstrap gem 套件下載
+gem 'bootstrap-sass', '~> 3.3.7'
+# gem 'sass-rails', '>= 3.2'
+gem 'jquery-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
