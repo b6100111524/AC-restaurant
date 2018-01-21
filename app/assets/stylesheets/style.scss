@@ -1,0 +1,81 @@
+//********** setting background **********//
+
+html, body {
+  width:  100%;
+  height: 100%;
+}
+
+body {
+  padding: 0px;
+  margin:  0px;
+  font-size: 14px;
+  line-height: 1.5;
+  background-color: #fff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin:  0px;               //border外擴
+  padding: 0px;               //border內縮
+}
+
+//********** layouts **********//
+
+.navbar {
+  // 父層
+  border-radius: 0px;
+  border: 0px;
+  background-color: #c98276;
+}
+
+.navbar-default .navbar-brand,
+.navbar-default .navbar-text,
+.navbar-default .navbar-nav li a {
+  // 餐廳評論網 + 帳號名稱 + 來去後台 登出 修改密碼
+  color: #fff;
+}
+
+//********** admin index **********//
+
+h1 {
+  color:  #c98276;
+  font-size: 40px;
+  margin-top:   10px;
+  margin-bottom: 5px;
+}
+
+.underbar {        //標題隔線
+  width: 100%;
+  height: 5px;
+  background-color: #c98276;
+  margin:  0 auto 30px auto;
+}
+
+// 按鈕套用
+.btn-primary {
+  border-radius: 0px;
+  border: 0px;
+  color:  #fff;
+  background-color: #aa9b87;
+}
+.btn-primary:hover {
+  background-color: #45392d;
+}
+.btn-primary:active:focus {
+  background-color: #45392d;
+}
+
+// 表格格式
+.th_head {
+  color: #7d2730;  // 表格首欄首列 顏色
+}
+
+
+
+
+
+
+
