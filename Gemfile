@@ -68,7 +68,7 @@ end
 
 group :production do
   # Heroku setting 1
-  gem 'pg'
+  gem 'pg', '~> 0.20'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
