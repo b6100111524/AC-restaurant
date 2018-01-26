@@ -1,7 +1,7 @@
 class Admin::CategoriesController < ApplicationController
   ## 身份驗證程序
-  before_action :authenticate_user!  # 驗證請求進入後台的是否為已登入的 User
-  before_action :authenticate_admin  # 驗證該 User 身份是否為網站管理員
+  ## before_action :authenticate_user!  # 驗證請求進入後台的是否為已登入的 User
+  before_action :authenticate_admin     # 驗證該 User 身份是否為網站管理員
   ## 把私有方法限定給 update, destory
   before_action :set_category, only: [:update, :destroy]
   ## 類別頁面展示 index 動作

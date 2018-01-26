@@ -1,6 +1,6 @@
 class Admin::RestaurantsController < ApplicationController
   ## 在登入帳號前 進行身份驗證
-  before_action :authenticate_user!
+  ## before_action :authenticate_user!
   before_action :authenticate_admin
   ## 把私有方法限定給 show, edit, update, destory
   before_action :set_restaurant, only: [:show, :edit, :update, :destroy]
