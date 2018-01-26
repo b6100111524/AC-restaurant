@@ -7,9 +7,7 @@
   <%# 切換 總表&分類 %>
 
   <div class="row">
-
     <div class="col-md-12">
-
       <div class="form-inline" >
         <%= form_for [:admin, @category] do |f| %>
           <div class="form-group">
@@ -24,13 +22,15 @@
         <% end %>
       </div>
 
-      <table class="table table-striped table-bordered">
+      <br>
+      <table class="table table-hover">
+      <%# table class= "table table-striped table-bordered" %>
         <thead>
           <tr>
-            <th>#</th>
-            <th>CATEGORY NAME</th>
-            <th>EDIT</th>
-            <th>DELETE</th>
+            <th class="th_head">#</th>
+            <th class="th_head">CATEGORY NAME</th>
+            <th class="th_head">EDIT</th>
+            <th class="th_head">DELETE</th>
           </tr>
         </thead>
         <tbody>
