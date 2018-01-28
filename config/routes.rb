@@ -5,6 +5,9 @@ Rails.application.routes.draw do
 
   # 前台路由設定 只允許 index & show
   resources :restaurants, only: [:index, :show]
+  # 前台分類瀏覽 只允許 show
+  resources :categories, only: :show
+
 
   # 後台路由設定 建立admin管理權限 (使用前置字元定義)
   namespace :admin do
