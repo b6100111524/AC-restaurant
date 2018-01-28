@@ -92,7 +92,7 @@ h1 {
   border-radius: 1px;
   padding: 4px;
   margin-bottom: 20px;
-  height: 300px;
+  height: 340px;
 }
 
 .restaurant-item img {
@@ -103,6 +103,27 @@ h1 {
 .restaurant-item .caption {
   padding: 10px;
 }
+
+h3 {
+  padding-top:     0px;
+  padding-bottom: 10px;
+}
+
+.nav-center {  
+  text-align: center;
+  ul.nav {
+    display: inline-block;
+    li {
+      display: inline
+      a {
+        float: left
+      }
+    }
+  }
+}
+
+
+
 
 
 

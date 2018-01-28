@@ -3,7 +3,15 @@
   <div class="underbar"></div>
   
   <div class="row">
-  <br>  
+    <div class="nav-center">
+      <ul class="nav nav-pills">
+        <li role="presentation" class="active"><%= link_to "全部餐廳", root_path %></li>
+        <% @categories.each do |category| %>
+          <li role="presentation"><%= link_to category.name, category_path(category) %></li>
+        <% end %>
+      </ul>
+    </div>
+    <br>  
     <!-- restaurants list，有多寫restaurant-item的class style -->
     <% @restaurants.each do |restaurant| %>
       <div class="col-sm-6 col-md-4">
@@ -25,3 +33,4 @@
       
   </div>
 </div>
+
