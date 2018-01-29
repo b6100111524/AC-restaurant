@@ -4,10 +4,13 @@ Rails.application.routes.draw do
   root "restaurants#index"
 
   # 前台路由設定 只允許 index & show
-  resources :restaurants, only: [:index, :show]
+  # 透過巢狀資源 do end 包覆 comment 的功能
+  resources :restaurants, only: [:index, :show] do
+    resources :comments, only: [:create, :destroy]
+  end 
+
   # 前台分類瀏覽 只允許 show
   resources :categories, only: :show
-
 
   # 後台路由設定 建立admin管理權限 (使用前置字元定義)
   namespace :admin do
