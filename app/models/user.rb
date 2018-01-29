@@ -3,6 +3,8 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+  ## 一位使用者可以提供多則評論
+  has_many :comments
 
   ## 判斷是否符合身份 role 字串是否符合身份
   def admin?
