@@ -13,8 +13,19 @@ class CommentsController < ApplicationController
     redirect_to restaurant_path(@restaurant)
   end
 
-  private
+  ## 刪除 評論
+  def destroy
+    @restaurant = Restaurant.find(params[:restaurant_id])
+    @comment = Comment.find(params[:id])
+    # 通過驗證 必須為管理者才能刪除
+    if current_user.admin?
+      @comment.destroy
+      redirect_to restaurant_path(@restaurant)
+    end
+  end
 
+
+  private
   def comment_params
     params.require(:comment).permit(:content)
   end
