@@ -26,6 +26,21 @@
   </div>
 </div>
 
+<!-- 顯示與餐廳相關的評論 -->
+<div class="container">
+  <% @restaurant.comments.each do |comment| %>
+    <div>
+      <h4><%= comment.user.email.split("@").first %></h4>
+      <p><%= simple_format comment.content %></p>
+      <p class="text-muted">
+        <em><%= time_ago_in_words(comment.created_at) %> </em>
+      </p>
+    </div>
+    <hr>
+  <% end %>
+</div>
+
+<!-- 顯示使用者評論窗格 -->
 <div class="container">
   <div class="row">
    <%= form_for [@restaurant, @comment] do |f| %>
