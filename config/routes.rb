@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   resources :restaurants, only: [:index, :show] do
     resources :comments, only: [:create, :destroy]
   end 
+  # 使用者簡介 頁面瀏覽 只允許 show edit & update
+  resources :users, only: [:show, :edit, :update]
 
   # 前台分類瀏覽 只允許 show
   resources :categories, only: :show

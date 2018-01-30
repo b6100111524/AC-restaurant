@@ -37,7 +37,9 @@
       </p>
     </div>
     <% if current_user.admin? %>
-      <%= link_to "Delete", restaurant_comment_path(@restaurant, comment), method: :delete %>
+      <div class="del-btn">
+        <%= link_to "Delete", restaurant_comment_path(@restaurant, comment), method: :delete %>
+      </div>
     <% end %>
     <hr>
   <% end %>
@@ -57,6 +59,6 @@
   <% end %>
   </div>
   <br>
-  <%= link_to 'Back to index', restaurants_path %>
+  <div class="back-btn"><%= link_to 'Back to index', restaurants_path %></div>
 </div>
 

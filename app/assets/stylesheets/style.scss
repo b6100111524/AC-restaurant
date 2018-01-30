@@ -22,6 +22,10 @@ h1, h2, h3, h4, h5, h6, p {
   padding: 0px;               //border內縮
 }
 
+a:hover, a:focus {
+  text-decoration: none;
+}
+
 //********** layouts **********//
 
 .navbar {
@@ -105,8 +109,9 @@ h1 {
 }
 
 h3 {
-  padding-top:     0px;
-  padding-bottom: 10px;
+  padding-top:      0px;
+  padding-bottom:  10px;
+  text-decoration: none;
 }
 
 .nav-center {  
@@ -117,14 +122,21 @@ h3 {
 }
 
 .nav-center a {
-  color: #7d2730;
+  color: #778899;;
 }
 
 .nav-pills > li.active > a, 
 .nav-pills > li.active > a:hover, 
 .nav-pills > li.active > a:focus {
-  background-color: #7d2730;
+  background-color: #778899;
 }
 
+.back-btn {
+  text-align:right;
+  margin: 0 auto 100px auto;
+}
 
-
+.del-btn {
+  text-align:right;
+  margin: 10px auto 0px auto;
+}
