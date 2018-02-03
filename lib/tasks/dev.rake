@@ -23,6 +23,7 @@ namespace :dev do                           # 使用 dev 前綴詞
     20.times do |i|
       user_name = FFaker::Name.first_name
       User.create!(
+        name: user_name,
         email: "#{user_name}@example.com",
         password: "12345678"
       )

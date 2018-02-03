@@ -27,5 +27,6 @@ puts "Category created!"
 
 
 # Default admin 管理員預設
-User.create(email: "123456@hotmail.com", password: "654321", role: "admin")
+# User.create(email: "123456@hotmail.com", password: "654321", role: "admin")
+User.create(email: "123456@hotmail.com", password: "654321", role: "admin", name: "root")
 puts "Default admin created!"
