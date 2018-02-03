@@ -25,6 +25,6 @@ class UsersController < ApplicationController
   end
   ## 驗證程序
   def user_params
-    params.require(:user).permit(:name, :intro)
+    params.require(:user).permit(:name, :intro, :avatar)
   end
 end

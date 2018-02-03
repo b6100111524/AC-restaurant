@@ -3,6 +3,10 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+
+  ## 上傳照片
+  mount_uploader :avatar, AvatarUploader
+  
   ## 一位使用者可以提供多則評論
   has_many :comments
 
