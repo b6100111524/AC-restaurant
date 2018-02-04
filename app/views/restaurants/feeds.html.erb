@@ -1,22 +1,45 @@
-<h1>餐廳最新動態</h1>
+<div class="container">
+  <h1>Fooood News Info</h1>
+  <div class="underbar"></div>
+  <div class="admin-index-type">
+  <%= link_to 'Restaurant', restaurants_path %> | <%= link_to 'News Info', feeds_restaurants_path %>
+  </div>
+  <div class="row">
 
-<div>
-  <h3>最新餐廳</h3>
+      <div class="col-md-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">最新餐廳</div>
+          <div class="panel-body">
+            <% @recent_restaurants.each do |restaurant| %>
+              <div>
+                <h4>
+                  <%= link_to restaurant.name, restaurant_path(restaurant) %>
+                  <small><%= restaurant.category.name %></small>
+                </h4>
+                <p><%= truncate(restaurant.description, length: 80) %></p>
+                <hr>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
 
-  <% @recent_restaurants.each do |restaurant| %>
-  <h4><%= link_to restaurant.name, restaurant_path(restaurant) %></h4>
-  <p><%= restaurant.category.name %></p>
-  <p><%= restaurant.description %></p>
-  <hr>
-  <% end %>
-</div>
+      <div class="col-md-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">最新評論</div>
+          <div class="panel-body">
+            <% @recent_comments.each do |comment| %>
+              <div>
+                <h4>
+                  <%= link_to comment.restaurant.name, restaurant_path(comment.restaurant) %>
+                </h4>
+                <p><%= truncate(comment.content, length: 80) %><small> - <%= link_to comment.user.name, user_path(comment.user) %></small></p>
+                <hr>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
 
-<div>
-  <h3>最新評論</h3>
-  <% @recent_comments.each do |comment| %>
-  <h4><%= link_to comment.restaurant.name, restaurant_path(comment.restaurant) %></h4>
-  <p><%= comment.content %></p>
-  <p>by <%= link_to comment.user.name, user_path(comment.user) %></p>
-  <hr>
-  <% end %>
+  </div>
 </div>
