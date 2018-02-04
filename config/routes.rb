@@ -7,7 +7,17 @@ Rails.application.routes.draw do
   # 透過巢狀資源 do end 包覆 comment 的功能
   resources :restaurants, only: [:index, :show] do
     resources :comments, only: [:create, :destroy]
+    # 自訂路由 瀏覽所有餐廳的最新動態
+    collection do
+      get :feeds
+    end
+    # 自訂路由 瀏覽個別餐廳的 Dashboard
+    member do
+      get :dashboard
+    end
   end 
+
+
   # 使用者簡介 頁面瀏覽 只允許 show edit & update
   resources :users, only: [:show, :edit, :update]
 
