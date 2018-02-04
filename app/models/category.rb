@@ -5,4 +5,5 @@ class Category < ApplicationRecord
   ## has_many :restaurants, dependent: :destroy
   ## 如果分類下已有餐廳，就不允許刪除分類（刪除時拋出 Error）
   has_many :restaurants, dependent: :restrict_with_error
+  ## has_many :restaurants, dependent: :restrict_with_exception
 end
