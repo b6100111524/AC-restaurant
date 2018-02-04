@@ -4,6 +4,9 @@ class UsersController < ApplicationController
 
   ## 建立 使用者 展示功能
   def show
+    ## @user = User.find(params[:id])
+    ## 顯示所有被評論的餐廳，但刪除重複的餐廳
+    @commented_restaurants = @user.restaurants.uniq
   end
   ## 建立 使用者 編輯功能
   def edit

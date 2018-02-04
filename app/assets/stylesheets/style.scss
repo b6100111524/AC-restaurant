@@ -146,3 +146,26 @@ h3 {
   text-align:right;
   margin: 10px auto 0px auto;
 }
+
+
+
+//********** user comment **********//
+.my-restaurant {
+  display: inline-block;
+  text-align: center;
+  padding: 7px 7px 0 7px;
+}
+
+.my-restaurant > div {
+  height: 60px;
+}
+
+.my-restaurant img {
+  max-height: 100%;
+}
+
+.panel a:hover .my-restaurant {
+  background-color: #eee;
+}
+
+

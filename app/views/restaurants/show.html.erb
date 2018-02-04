@@ -30,7 +30,7 @@
 <div class="container">
   <% @restaurant.comments.each do |comment| %>
     <div>
-      <h4><%= comment.user.email.split("@").first %></h4>
+      <h3><%= comment.user.email.split("@").first %></h3>
       <h4><%= comment.user.name %></h4>
       <p><%= simple_format comment.content %></p>
       <p class="text-muted">
