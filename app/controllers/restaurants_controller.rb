@@ -12,7 +12,6 @@ class RestaurantsController < ApplicationController
     @restaurant = Restaurant.find(params[:id])
     @comment = Comment.new
   end
-
   ## 最新動態頁面展示
   def feeds
     # 降序desc 排列最近更新的餐廳 十筆
@@ -20,5 +19,10 @@ class RestaurantsController < ApplicationController
     # 降序desc 排列最近更新的評論 十筆
     @recent_comments = Comment.order(created_at: :desc).limit(10)
   end
+  ## 查看餐廳分析
+  def dashboard
+    @restaurant = Restaurant.find(params[:id])
+  end
+
 
 end
