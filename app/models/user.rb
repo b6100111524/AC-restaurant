@@ -6,12 +6,13 @@ class User < ApplicationRecord
 
   ##
   validates_presence_of :name
-
   ## 上傳照片
   mount_uploader :avatar, AvatarUploader
-  
   ## 一位使用者可以提供多則評論
-  has_many :comments
+  ## has_many :comments
+  ## 如果 User 已經有了評論，就不允許刪除帳號（刪除時拋出 Error）
+  has_many :comments, dependent: :restrict_with_error
+
   ## 一位使用者可以評論多間餐廳 透過 comment 連結關係
   has_many :restaurants, through: :comments
 

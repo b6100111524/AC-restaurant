@@ -7,5 +7,6 @@ class Restaurant < ApplicationRecord
   ## 關連設定 允許存在 未分類的餐廳
   belongs_to :category, optional: true
   ## 一間餐廳擁有多則評論
-  has_many :comments
+  ## 當 Restaurant 物件被刪除時，順便刪除依賴的 Comment
+  has_many :comments, dependent: :destroy
 end
