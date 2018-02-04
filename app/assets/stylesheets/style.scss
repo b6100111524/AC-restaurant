@@ -150,22 +150,30 @@ h3 {
 
 
 //********** user comment **********//
+.panel-body{
+  text-align: justify;  //分散切齊
+}
+
 .my-restaurant {
   display: inline-block;
   text-align: center;
-  padding: 7px 7px 0 7px;
+  padding: 5px 5px 0 5px;
 }
 
 .my-restaurant > div {
   height: 60px;
+  width:  90px;
 }
 
 .my-restaurant img {
   max-height: 100%;
+  max-width:  100%;
 }
 
 .panel a:hover .my-restaurant {
   background-color: #eee;
 }
 
-
+.panel-title {
+  padding-bottom: 0px; 
+}

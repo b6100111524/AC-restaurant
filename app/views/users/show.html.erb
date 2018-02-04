@@ -26,7 +26,7 @@
       <!-- 顯示已評論餐廳的清單，panel包一個 panel-body 裡面使用 row>col 的 layouts 來顯示評論 -->
       <div class="panel panel-default">
         <div class="panel-heading">
-          <h3 class="panel-title"><strong><%= @commented_restaurants.count %></strong>評論餐<h3>
+          <h3 class="panel-title">你評論了 <strong><%= @commented_restaurants.count %></strong> 間餐廳</h3>
         </div>
         <div class="panel-body">
           <% @commented_restaurants.each do |restaurant| %>
@@ -40,9 +40,9 @@
           <% end %>
           <% end %>
         </div>
-
     </div>
+    <br>
+    <div class="back-btn"><%= link_to 'Back to index', restaurants_path %></div>
   </div>
-  <br>
-  <div class="back-btn"><%= link_to 'Back to index', restaurants_path %></div>
+
 </div>
