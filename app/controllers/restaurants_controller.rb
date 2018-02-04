@@ -13,4 +13,12 @@ class RestaurantsController < ApplicationController
     @comment = Comment.new
   end
 
+  ## 最新動態頁面展示
+  def feeds
+    # 降序desc 排列最近更新的餐廳 十筆
+    @recent_restaurants = Restaurant.order(created_at: :desc).limit(10)
+    # 降序desc 排列最近更新的評論 十筆
+    @recent_comments = Comment.order(created_at: :desc).limit(10)
+  end
+
 end
